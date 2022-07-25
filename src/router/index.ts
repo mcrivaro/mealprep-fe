@@ -1,6 +1,8 @@
 import Vue from "vue";
 import VueRouter, { RouteConfig } from "vue-router";
 import HomeView from "../views/HomeView.vue";
+import PlanView from "../views/PlanView.vue";
+import MealView from "../views/MealView.vue";
 
 Vue.use(VueRouter);
 
@@ -19,6 +21,12 @@ const routes: Array<RouteConfig> = [
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
   },
+  {
+    path: "/plans",
+    name: "plans",
+    component: PlanView,
+  },
+  { path: "/meals", name: "meals", component: MealView },
 ];
 
 const router = new VueRouter({
